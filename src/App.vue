@@ -1,8 +1,10 @@
 <template>
   <div class="container mt-4">
-    <h1 class="mb-4">Agendamento de Transferências</h1>
-    <FormularioTransferencia ref="formulario" :erro="erro" @submit="cadastrar" />
-    <ListaTransferencias :agendamentos="agendamentos" />
+    <div class="container-funcional">
+      <h1 class="mb-4">Agendamento de Transferências</h1>
+      <FormularioTransferencia ref="formulario" :erro="erro" @submit="cadastrar" />
+      <ListaTransferencias :agendamentos="agendamentos" />
+    </div>
   </div>
 </template>
 
@@ -51,5 +53,11 @@ export default {
 .container {
   max-width: 600px;
   margin: 0 auto;
+}
+.container-funcional {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 </style>
